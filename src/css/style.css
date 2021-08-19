@@ -1,0 +1,80 @@
+:root {
+  --title-font: "Comfortaa", cursive, Arial, sans-serif;
+  --text-font: "Poppins", Arial, sans-serif;
+  /* 
+    Comfortaa 500;700 
+    Poppins 400;500 
+  */
+  --radius: 12px;
+  --transition: 0.15s ease-in;
+  --shadow: rgba(0, 0, 0, 0.3);
+  /* Colors */
+  --dark-gray: #2e353d;
+  --gray: #686c73;
+  --light-gray: #c2c8cf;
+  --white: #ffffff;
+  --yellow: #fed449;
+  --red: #f36157;
+  --orange: #ff765a;
+  --blue: #06bee1;
+  --purple: #9c73f1;
+  --dark-purple: #3e3488;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+#app {
+  font-family: var(--text-font);
+  color: var(--dark-gray);
+}
+
+.header {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.header__title {
+  font-family: var(--title-font);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.username-input {
+  border-radius: var(--radius);
+  border: 2px solid rgba(0, 0, 0, 0);
+  display: block;
+  font-size: 1rem;
+  height: 3rem;
+  margin: 1.5rem auto 0;
+  outline: none;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+  width: 250px;
+  box-shadow: 0.5px 2px 4px 0 var(--shadow);
+}
+.username-input:focus {
+  border: 2px solid var(--dark-purple);
+  transition: var(--transition);
+  box-shadow: 0.5px 3px 6px 0 var(--shadow);
+}
+.username-input:hover {
+  border: 2px solid var(--dark-purple);
+  transition: var(--transition);
+  box-shadow: 0.5px 3px 6px 0 var(--shadow);
+}

@@ -4,10 +4,34 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>mrLuisFer | Github Profile</title>
+    <meta name="description" content="Github Profile" />
+    <meta
+      name="keywords"
+      content="github, profile, mrluisfer, mrluisfer, mrluisfer.github.io, git, javascript, octokit"
+    />
+    <meta name="author" content="mrLuisFer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <main id="app">
+      <header class="header">
+        <h1 class="header__title">Search a Github User Profile</h1>
+        <input
+          class="username-input"
+          id="gh-username"
+          name="gh-username"
+          type="text"
+          placeholder="Insert a username..."
+        />
+      </header>
+      <section class="content" id="content"></section>
+    </main>
+    <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>

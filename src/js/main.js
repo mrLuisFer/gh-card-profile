@@ -1,4 +1,5 @@
 import '../css/style.css'
+import '../css/attribution.css'
 import { Octokit } from 'https://cdn.skypack.dev/@octokit/core'
 import { handleChangeEvent } from './handleChangeEvent'
 

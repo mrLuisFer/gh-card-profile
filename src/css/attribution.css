@@ -1,0 +1,20 @@
+.attribution {
+  text-align: center;
+}
+
+.attribution__link {
+  color: var(--gray);
+  font-family: var(--text-font);
+  font-weight: 400;
+  opacity: 0.7;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.attribution__link:hover {
+  opacity: 1;
+}
+
+.attribution__link:hover span {
+  color: var(--dark-gray);
+  text-decoration: underline;
+}

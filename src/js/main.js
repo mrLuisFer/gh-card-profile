@@ -8,4 +8,5 @@ const octokit = new Octokit({ auth: ghToken })
 const inputUsername = document.getElementById('gh-username')
 inputUsername.addEventListener('change', (event) => {
   handleChangeEvent(event, octokit)
+  event.target.value = ''
 })

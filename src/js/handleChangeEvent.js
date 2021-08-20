@@ -9,8 +9,6 @@ export const handleChangeEvent = async (event, octokit) => {
   const response = await octokit.request('GET /users/{username}', {
     username: username,
   })
-  console.log(response)
-
   if (response.status === 200) {
     user = response.data
 

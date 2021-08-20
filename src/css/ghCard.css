@@ -1,15 +1,32 @@
 .ghCard {
-  width: 100%;
   margin-top: 2rem;
+  width: 100%;
 }
 
 .ghCard__img {
-  width: 200px;
-  margin: 0 auto;
-  display: block;
   border-radius: var(--radius);
+  display: block;
+  margin: 0 auto;
+  transition: var(--transition);
+  width: 230px;
+  cursor: pointer;
+}
+.ghCard__img:hover {
+  transform: scale(1.05);
 }
 
 .ghCard__content-title {
   text-align: center;
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+}
+
+.ghCard__content-bio {
+  text-align: center;
+}
+
+.ghCard__content-bio h2 {
+  opacity: 0.6;
+  font-size: 0.9rem;
+  font-family: var(--title-font);
 }

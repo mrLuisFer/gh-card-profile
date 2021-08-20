@@ -3,14 +3,14 @@ import { profileCard } from './profileCard.js'
 const content = document.getElementById('content')
 
 export const handleChangeEvent = async (event, octokit) => {
-  let user
+  const inputValue = event.target.value
+  const username = inputValue.replace(/\s/g, '-')
 
-  const username = event.target.value
   const response = await octokit.request('GET /users/{username}', {
     username: username,
   })
   if (response.status === 200) {
-    user = response.data
+    const user = response.data
 
     content.innerHTML = profileCard(user)
   }

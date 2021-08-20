@@ -1,19 +1,19 @@
-import { profileCard } from "./profileCard.js";
+import { profileCard } from './profileCard.js'
 
-const content = document.getElementById("content");
+const content = document.getElementById('content')
 
 export const handleChangeEvent = async (event, octokit) => {
-  let user;
+  let user
 
-  const username = event.target.value;
-  const response = await octokit.request("GET /users/{username}", {
+  const username = event.target.value
+  const response = await octokit.request('GET /users/{username}', {
     username: username,
-  });
-  console.log(response);
+  })
+  console.log(response)
 
   if (response.status === 200) {
-    user = response.data;
+    user = response.data
 
-    content.innerHTML = profileCard(user);
+    content.innerHTML = profileCard(user)
   }
-};
+}

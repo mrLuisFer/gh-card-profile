@@ -1,5 +1,6 @@
 import "../css/style.css";
 import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
+import { profileCard } from './profileCard.js'
 
 const ghToken = import.meta.env.VITE_GH_TOKEN;
 const octokit = new Octokit({ auth: ghToken });
@@ -22,8 +23,6 @@ inputUsername.addEventListener("change", async (event) => {
   if (response.status === 200) {
     user = response.data;
 
-    content.innerHTML = `
-      ${user.login} 
-    `;
+    content.innerHTML = profileCard(user)
   }
 });

@@ -17,17 +17,30 @@
       href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link
+      crossorigin="anonymous"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main id="app">
       <header class="header">
-        <h1 class="header__title">Search a Github User Profile</h1>
+        <h1 class="header__title">
+          <i class="fab fa-github-alt"></i>
+          Search a Github User Profile
+        </h1>
+        <p class="header__subtitle">
+          Enter the username of a <span>github</span> user to know information
+          about it.
+        </p>
         <input
           class="username-input"
           id="gh-username"
           name="gh-username"
-          type="text"
           placeholder="Insert a username..."
+          type="text"
         />
       </header>
       <section class="content" id="content"></section>

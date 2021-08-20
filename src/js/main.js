@@ -1,12 +1,18 @@
-import "../css/style.css";
-import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
-import { handleChangeEvent } from "./handleChangeEvent";
+import '../css/style.css'
+import { Octokit } from 'https://cdn.skypack.dev/@octokit/core'
+import { handleChangeEvent } from './handleChangeEvent'
+import { defineConfig } from 'vite'
+import eslintPlugin from 'vite-plugin-eslint'
 
-const ghToken = import.meta.env.VITE_GH_TOKEN;
-const octokit = new Octokit({ auth: ghToken });
+export default defineConfig({
+  plugins: [eslintPlugin()],
+})
 
-const inputUsername = document.getElementById("gh-username");
+const ghToken = import.meta.env.VITE_GH_TOKEN
+const octokit = new Octokit({ auth: ghToken })
 
-inputUsername.addEventListener("change", (event) => {
-  handleChangeEvent(event, octokit);
-});
+const inputUsername = document.getElementById('gh-username')
+
+inputUsername.addEventListener('change', (event) => {
+  handleChangeEvent(event, octokit)
+})

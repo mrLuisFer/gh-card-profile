@@ -95,3 +95,9 @@ body {
   box-shadow: 0.5px 3px 6px 0 var(--shadow);
   transition: var(--transition);
 }
+
+.content__searchImg {
+  display: block;
+  margin: 1rem auto 0;
+  width: 250px;
+}

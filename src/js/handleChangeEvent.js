@@ -14,4 +14,6 @@ export const handleChangeEvent = async (event, octokit) => {
 
     content.innerHTML = profileCard(user)
   }
+
+  event.target.value = ''
 }

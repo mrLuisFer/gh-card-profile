@@ -104,3 +104,7 @@ body {
 .content__searchImg:hover {
   transform: scale(1.05);
 }
+
+.repos {
+  display: none;
+}

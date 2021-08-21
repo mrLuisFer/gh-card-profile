@@ -79,7 +79,7 @@ export const profileCard = (user) => {
           </h2>
           <p>${user.public_repos}</p>
         </div>
-      </article>
+      </article>  
     </div>
   `
 

@@ -2,10 +2,7 @@ import { profileCard } from './profileCard.js'
 
 const content = document.getElementById('content')
 
-export const handleChangeEvent = async (event, octokit) => {
-  const inputValue = event.target.value
-  const username = inputValue.replace(/\s/g, '-')
-
+export const getUserProfile = async ({ event, octokit, username }) => {
   const response = await octokit.request('GET /users/{username}', {
     username: username,
   })

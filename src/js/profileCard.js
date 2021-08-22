@@ -2,7 +2,6 @@ import '../css/ghCard.css'
 
 export const profileCard = (user) => {
   console.log(user)
-
   const createdAt = new Date(user.created_at).toDateString()
 
   const htmlTemplate = /* html */ `

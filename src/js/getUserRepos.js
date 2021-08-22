@@ -1,3 +1,5 @@
+import '../css/repos.css'
+
 const reposSection = document.querySelector('#repos')
 
 export const getUserRepos = async ({ username, octokit }) => {
@@ -8,18 +10,22 @@ export const getUserRepos = async ({ username, octokit }) => {
 
   if (response?.status === 200 && response !== undefined) {
     const data = response.data
-    const htmlInserted = /* html */ `
+
+    let htmlInserted = /* html */ `
       <h1>${username} has ${data.length} repositories</h1>
       <p>Some text</p>
-      ${data.map(
-        (repo) =>
-          `
-          <div class="repo" id="${repo.id}">
-            <h1>${repo.name}</h1>
-          </div>
-          `
-      )}
     `
-    reposSection.innerHTML = htmlInserted
+
+    const reposHtml = data.map(
+      (repo) => /* html */ `
+        <div class="repo" id="${repo.id}">
+          <h1>${repo.name}</h1>
+        </div>
+        `
+    )
+
+    console.log(reposHtml)
+
+    reposSection.innerHTML = reposHtml.join(' ')
   }
 }

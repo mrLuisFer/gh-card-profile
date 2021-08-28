@@ -8,17 +8,13 @@
   --radius: 12px;
   --transition: 0.15s ease-in;
   --shadow: rgba(0, 0, 0, 0.3);
-  /* Colors */
-  --dark-gray: #2e353d;
-  --gray: #686c73;
-  --light-gray: #c2c8cf;
-  --white: #ffffff;
-  --yellow: #fed449;
-  --red: #f36157;
-  --orange: #ff765a;
-  --blue: #06bee1;
-  --purple: #9c73f1;
-  --dark-purple: #3e3488;
+  /* Darkmode */
+  --primary-bg: #141c2f;
+  --primary-text-color: #f5f8ff;
+  --primary-blue: #0078fe;
+  --secondary-bg: #1f2a48;
+
+  --secondary-light: #ffffff;
   font-size: 16px;
 }
 
@@ -36,5 +32,55 @@ html {
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  background: var(--primary-bg);
+  font-family: var(--text-font);
   scroll-behavior: smooth;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 1rem 0;
+}
+
+.header-title {
+  color: var(--primary-text-color);
+  font-family: var(--title-font);
+  font-size: 1.5rem;
+}
+
+.searcher {
+  align-items: center;
+  background: var(--secondary-bg);
+  border-radius: var(--radius);
+  color: var(--primary-blue);
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: space-between;
+  margin: 2rem 1rem 1rem;
+  padding: 0.3rem;
+}
+.searcher-icon {
+  cursor: pointer;
+  font-size: 1.3rem;
+  margin-left: 0.3rem;
+}
+.searcher-input {
+  background: transparent;
+  border: none;
+  color: var(--primary-text-color);
+  outline: none;
+  padding-left: 0.25rem;
+}
+.searcher-btn {
+  border-radius: var(--radius);
+  padding: 0.5rem;
+  text-align: center;
+  border: none;
+  outline: none;
+  background: var(--primary-blue);
+  color: var(--primary-text-color);
+  font-family: var(--title-font);
+  font-weight: 700;
 }

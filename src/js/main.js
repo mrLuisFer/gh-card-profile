@@ -1,3 +1,5 @@
+import '../css/style.css'
+
 import { Octokit } from 'https://cdn.skypack.dev/@octokit/core'
 import { getUserProfile } from './getUserProfile'
 

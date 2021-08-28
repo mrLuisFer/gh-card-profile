@@ -12,6 +12,6 @@ const inputUsername = document.querySelector('#gh-username')
 inputUsername.addEventListener('change', (event) => {
   const inputValue = event.target.value
   username = inputValue.replace(/\s/g, '-')
-  getUserProfile({ event, octokit, username })
   console.log(username)
+  getUserProfile({ event, octokit, username })
 })

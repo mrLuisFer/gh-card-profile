@@ -1,83 +1,60 @@
 export const profileCard = (user) => {
   console.log(user)
   const createdAt = new Date(user.created_at).toDateString()
-
   const htmlTemplate = /* html */ `
-    <div id="${user.id}" class="ghCard">
+    <section class="card-header">
       <a href="${user.html_url}" target="_blank" rel="noreferrer">
         <img
-          class="ghCard__img"
+          class="card-header-avatar"
           draggable="false"
           src="${user.avatar_url}"
           title="${user.name}"
         />
       </a>
-      <article class="ghCard__content">
-        <div>
-          <h2 class="ghCard__content-title">${user.login}</h2>
-          ${
-            user.bio !== null
-              ? `
-              <div class="ghCard__content-bio">
-                <h2>Description:</h2>
-                <p>${user.bio}</p>
-              </div>
-              `
-              : ''
-          }
-        </div>
-        <div>
-          <h2>
-            <i class="fas fa-user-friends"></i>
-            Followers:
-          </h2>
-          <p>${user.followers}</p>
-        </div>
-        <div>
-          <h2>Following:</h2>
-          <p>${user.following}</p>
-        </div>
-        <div>
-          <h2>
-            <i class="fas fa-map-marker-alt"></i>
-            Location:
-          </h2>
-          <p>${user.location}</p>
-        </div>
-        <div>
-          <h2>
-            <i class="fab fa-twitter"></i>
-            Twitter:  
-          </h2>
-          <p>@${user.twitter_username}</p>
-        </div>
-        <div>
-          <h2>
-            <i class="fas fa-globe-americas"></i>
-            Website:
-          </h2>
-          <p>
-            <a href="${user.blog}" target="_blank" rel="noreferrer">  
-              ${user.blog}
-            </a>
-          </p>
-        </div>
-        <div>
-          <h2>
-            <i class="fas fa-calendar-alt"></i>
-            Created at:
-          </h2>
-          <p>${createdAt}</p>
-        </div>
-        <div>
-          <h2>
-            <i class="fas fa-code-branch"></i>
-            Public Repos:
-          </h2>
-          <p>${user.public_repos}</p>
-        </div>
-      </article>  
-    </div>
+      <div class="card-profileName">
+        <h2 class="card-profileName-name">${user.name}</h2>
+        <a href="${user?.html_url}" class="card-profileName-username">@${user.login}</a>
+        <p class="card-profileName-date">Joined ${createdAt}</p>
+      </div>
+    </section>
+
+    <article class="card-description">
+      <p class="card-description-txt">${user.bio}</p>
+    </article>
+
+    <section class="card-info">
+      <div>
+        <p>Repos</p>
+        <p>${user.public_repos}</p>
+      </div>
+      <div>
+        <p>Followers</p>
+        <p>${user.followers}</p>
+      </div>
+      <div>
+        <p>Following</p>
+        <p>${user.following}</p>
+      </div>
+    </section>
+
+    <section>
+      <div>
+        <i class="fas fa-map-marker-alt"></i>
+        <p>${user.location}</p>
+      </div>
+      <div>
+        <i class="fas fa-link"></i>
+        <p>${user.blog}</p>
+      </div>
+      <div>
+        <i class="fab fa-twitter"></i>
+        <p>${user.twitter_username}</p>
+      </div>
+      <div>
+        <i class="far fa-building"></i>
+        <p>@${user.company}</p>
+      </div>
+    </section>
   `
 
   return htmlTemplate

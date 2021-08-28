@@ -1,4 +1,5 @@
 import '../scss/style.scss'
+import '../scss/card.scss'
 
 import { Octokit } from 'https://cdn.skypack.dev/@octokit/core'
 import { getUserProfile } from './getUserProfile'

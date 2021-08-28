@@ -26,44 +26,17 @@
   </head>
   <body>
     <main id="app">
-      <header class="header">
-        <h1 class="header__title">
-          <i class="fab fa-github-alt"></i>
-          Search a Github User Profile
-        </h1>
-        <p class="header__subtitle">
-          Enter the username of a <span>github</span> user to know information
-          about it.
-        </p>
+      <header>
+        <h1>ghFinder</h1>
+      </header>
+      <section>
         <input
-          class="username-input"
+          class=""
           id="gh-username"
           name="gh-username"
           placeholder="Insert a username..."
           type="text"
         />
-      </header>
-      <section class="content" id="content">
-        <img
-          alt="Search a Github Username"
-          class="content__searchImg"
-          draggable="false"
-          src="searching.svg"
-          title="Search a Github Username"
-        />
-        <footer class="attribution">
-          <a
-            class="attribution__link"
-            href="https://storyset.com/data"
-            rel="noreferrer"
-            target="_blank"
-            >Data illustrations by
-            <span> Storyset</span>
-          </a>
-        </footer>
-      </section>
-      <section class="repos" id="repos">
-        <button type="button" id="show-repos">Show repositories</button>
       </section>
     </main>
     <script type="module" src="/src/js/main.js"></script>

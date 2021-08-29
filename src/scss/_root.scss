@@ -1,0 +1,38 @@
+:root {
+  --title-font: 'Comfortaa', cursive, Arial, sans-serif;
+  --text-font: 'Poppins', Arial, sans-serif;
+  /* 
+    Comfortaa 500;700 
+    Poppins 400;500 
+  */
+  --radius: 12px;
+  --transition: 0.15s ease-in;
+  --shadow: rgba(0, 0, 0, 0.3);
+  /* Darkmode */
+  --primary-bg: #141c2f;
+  --secondary-bg: #1f2a48;
+  --primary-text-color: #f5f8ff;
+  --primary-blue: #0078fe;
+
+  --secondary-light: #ffffff;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: var(--primary-bg);
+  font-family: var(--text-font);
+  scroll-behavior: smooth;
+}

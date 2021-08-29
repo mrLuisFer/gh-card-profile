@@ -1,0 +1,74 @@
+.card {
+  background: var(--secondary-bg);
+  padding: 1.7rem 0.8rem;
+  color: var(--primary-text-color);
+  margin: 1rem;
+  border-radius: var(--radius);
+
+  &-header {
+    display: flex;
+    align-items: center;
+    column-gap: 0.7rem;
+
+    &-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+    }
+
+    &-profileName {
+      &-name {
+        font-size: 1.3rem;
+        font-family: var(--title-font);
+        font-weight: 700;
+        letter-spacing: 0.1px;
+      }
+
+      &-username {
+        color: var(--primary-blue);
+        text-decoration: none;
+        letter-spacing: 0.2px;
+        font-size: 0.8rem;
+        line-height: 1.5;
+      }
+
+      &-date {
+        font-size: 0.8rem;
+        line-height: 1.5;
+        letter-spacing: 0.1px;
+      }
+    }
+  }
+
+  &-description {
+    text-align: left;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+  }
+
+  &-social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--primary-bg);
+    padding: 0.6rem 1rem;
+    text-align: center;
+    margin: 0.8rem;
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+
+    p {
+      font-size: 0.7rem;
+      line-height: 2.5;
+      letter-spacing: 0.3px;
+      text-align: center;
+    }
+
+    span {
+      display: block;
+      font-size: 1rem;
+      font-family: var(--title-font);
+      font-weight: 700;
+    }
+  }
+}

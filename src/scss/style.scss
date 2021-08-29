@@ -68,7 +68,7 @@
     outline: none;
     padding: 0.5rem;
     text-align: center;
-    transition: var(--transition);
+    transition: box-shadow var(--transition);
 
     &:hover {
       box-shadow: 0 0 4px 1px var(--primary-blue);

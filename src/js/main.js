@@ -7,7 +7,6 @@ const octokit = new Octokit({ auth: ghToken })
 let username
 
 const inputUsername = document.querySelector('#gh-username')
-// const searchBtn = document.querySelector('#search-btn')
 const searcher = document.querySelector('#searcher')
 
 const handleSearchUser = (query, event) => {
@@ -23,10 +22,10 @@ inputUsername.addEventListener('change', (event) => {
   handleSearchUser(inputValue, event)
 })
 
-inputUsername.addEventListener('focus', (event) => {
+inputUsername.addEventListener('focus', () => {
   searcher.classList.add('borderColor')
 })
 
-inputUsername.addEventListener('blur', (event) => {
+inputUsername.addEventListener('blur', () => {
   searcher.classList.remove('borderColor')
 })

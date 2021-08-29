@@ -25,18 +25,23 @@
   margin: 2rem 1rem 1rem;
   padding: 0.3rem;
 
+  @media (min-width: 375px) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
   &-form {
-    display: flex;
     align-items: center;
     column-gap: 0.45rem;
+    display: flex;
 
     &-icon {
-      cursor: pointer;
-      font-size: 1.3rem;
-      margin-left: 0.3rem;
-      display: flex;
       align-items: center;
+      cursor: pointer;
+      display: flex;
+      font-size: 1.3rem;
       justify-content: center;
+      margin-left: 0.3rem;
     }
 
     &-input {
@@ -44,7 +49,7 @@
       border: none;
       color: var(--primary-text-color);
       outline: none;
-      padding: 0.5rem 0;
+      width: 100%;
 
       &::placeholder {
         color: var(--primary-text-color);
@@ -53,14 +58,20 @@
   }
 
   &-btn {
-    border-radius: var(--radius);
-    padding: 0.5rem;
-    text-align: center;
-    border: none;
-    outline: none;
     background: var(--primary-blue);
+    border-radius: var(--radius);
+    border: none;
     color: var(--primary-text-color);
+    cursor: pointer;
     font-family: var(--title-font);
     font-weight: 700;
+    outline: none;
+    padding: 0.5rem;
+    text-align: center;
+    transition: var(--transition);
+
+    &:hover {
+      box-shadow: 0 0 4px 1px var(--primary-blue);
+    }
   }
 }

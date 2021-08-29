@@ -22,6 +22,7 @@
         font-family: var(--title-font);
         font-weight: 700;
         letter-spacing: 0.1px;
+        margin-bottom: 0.3rem;
       }
 
       &-username {
@@ -44,6 +45,7 @@
     text-align: left;
     letter-spacing: 1px;
     font-size: 0.9rem;
+    margin: 1rem 0.8rem;
   }
 
   &-social {
@@ -69,6 +71,34 @@
       font-size: 1rem;
       font-family: var(--title-font);
       font-weight: 700;
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding-left: 0.8rem;
+    margin: 1.5rem 0;
+
+    div {
+      display: flex;
+      column-gap: 1rem;
+      font-size: 0.8rem;
+      transition: color var(--transition);
+      width: fit-content;
+
+      &:hover {
+        color: var(--primary-blue);
+      }
+
+      p {
+        font-family: var(--title-font);
+      }
+
+      i {
+        font-size: 1rem;
+      }
     }
   }
 }

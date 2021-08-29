@@ -15,7 +15,7 @@ export const profileCard = (user) => {
         </a>
         <div class="card-header-profileName">
           <h2 class="card-header-profileName-name">${user.name}</h2>
-          <a href="${user?.html_url}" class="card-header-profileName-username"
+          <a href="${user?.html_url}" class="card-header-profileName-username" target="_blank" rel="noreferrer"
             >@${user.login}</a
           >
           <p class="card-header-profileName-date">Joined ${createdAt}</p>
@@ -47,7 +47,7 @@ export const profileCard = (user) => {
         </div>
       </section>
 
-      <section>
+      <section class="card-info">
         <div>
           <i class="fas fa-map-marker-alt"></i>
           <p>${user.location}</p>
@@ -58,7 +58,7 @@ export const profileCard = (user) => {
         </div>
         <div>
           <i class="fab fa-twitter"></i>
-          <p>${user.twitter_username}</p>
+          <p>@${user.twitter_username}</p>
         </div>
         <div>
           <i class="far fa-building"></i>

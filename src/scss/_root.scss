@@ -35,4 +35,25 @@ body {
   background: var(--primary-bg);
   font-family: var(--text-font);
   scroll-behavior: smooth;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: var(--radius);
+    background: var(--secondary-bg);
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-blue);
+  }
+}
+
+.app {
+  min-width: 100%;
 }

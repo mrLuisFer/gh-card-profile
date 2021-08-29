@@ -1,79 +1,94 @@
 export const profileCard = (user) => {
   console.log(user)
   const createdAt = new Date(user.created_at).toDateString()
+  const {
+    avatar_url,
+    bio,
+    blog,
+    company,
+    followers,
+    following,
+    html_url,
+    location,
+    login,
+    name,
+    public_repos,
+    twitter_username,
+  } = user
+
   const htmlTemplate = /* html */ `
     <div class="card">
       <section class="card-header">
-        <a href="${user.html_url}" target="_blank" rel="noreferrer">
+        <a href="${html_url}" target="_blank" rel="noreferrer">
           <img
             class="card-header-avatar"
             draggable="false"
-            src="${user.avatar_url}"
-            title="${user.name}"
+            src="${avatar_url}"
+            title="${name}"
             loading="lazy"
           />
         </a>
         <div class="card-header-profileName">
-          <h2 class="card-header-profileName-name">${user.name}</h2>
+          <h2 class="card-header-profileName-name">${name}</h2>
           <a
-            href="${user?.html_url}"
+            href="${html_url}"
             class="card-header-profileName-username"
             target="_blank"
             rel="noreferrer"
-            >@${user.login}</a
+            >@${login}</a
           >
           <p class="card-header-profileName-date">Joined ${createdAt}</p>
         </div>
       </section>
       <article class="card-description">
-        <p class="card-description-txt">${user.bio}</p>
+        <p class="card-description-txt">${bio}</p>
       </article>
       <section class="card-social">
         <div>
           <p>
             Repos
-            <span> ${user.public_repos} </span>
+            <span> ${public_repos} </span>
           </p>
         </div>
         <div>
           <p>
             Followers
-            <span> ${user.followers} </span>
+            <span> ${followers} </span>
           </p>
         </div>
         <div>
           <p>
             Following
-            <span> ${user.following} </span>
+            <span> ${following} </span>
           </p>
         </div>
       </section>
       <section class="card-info">
         <div>
           <i class="fas fa-map-marker-alt"></i>
-          <p>${user.location}</p>
+          <p>${location}</p>
         </div>
         <div>
           <i class="fas fa-link"></i>
           <p>
-            <a href="${user.blog}" target="_blank" rel="noreferrer">
-              ${user.blog}
+            <a href="${blog}" target="_blank" rel="noreferrer">
+              ${blog}
             </a>
           </p>
         </div>
         <div>
           <i class="fab fa-twitter"></i>
           <a
-            href="https://twitter.com/${user.twitter_username}"
+            href="https://twitter.com/${twitter_username}"
             target="_blank"
             rel="noreferrer"
           >
-            <p>@${user.twitter_username}</p>
+            <p>@${twitter_username}</p>
           </a>
         </div>
         <div>
           <i class="far fa-building"></i>
-          <p>@${user.company}</p>
+          <p>@${company}</p>
         </div>
       </section>
     </div>

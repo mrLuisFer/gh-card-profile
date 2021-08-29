@@ -5,6 +5,11 @@
   margin: 1rem;
   padding: 1.7rem 0.8rem;
 
+  @media (min-width: 700px) {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
   &-header {
     align-items: center;
     column-gap: 0.7rem;
@@ -60,7 +65,7 @@
     border-radius: var(--radius);
     display: flex;
     font-size: 0.9rem;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0.8rem;
     padding: 0.6rem 1rem;
     text-align: center;
@@ -88,7 +93,7 @@
   &-info {
     display: flex;
     flex-direction: column;
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 0;
     padding-left: 0.8rem;
     row-gap: 1rem;
 

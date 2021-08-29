@@ -24,6 +24,8 @@
   justify-content: space-between;
   margin: 2rem 1rem 1rem;
   padding: 0.3rem;
+  border: 0.5px solid transparent;
+  transition: border var(--transition);
 
   @media (min-width: 375px) {
     display: grid;
@@ -53,6 +55,7 @@
 
       &::placeholder {
         color: var(--primary-text-color);
+        opacity: 0.8;
       }
     }
   }
@@ -74,4 +77,9 @@
       box-shadow: 0 0 4px 1px var(--primary-blue);
     }
   }
+}
+
+.borderColor {
+  transition: border var(--transition);
+  border: 0.5px solid var(--primary-blue);
 }

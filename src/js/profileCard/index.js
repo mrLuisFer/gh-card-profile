@@ -15,17 +15,19 @@ export const profileCard = (user) => {
         </a>
         <div class="card-header-profileName">
           <h2 class="card-header-profileName-name">${user.name}</h2>
-          <a href="${user?.html_url}" class="card-header-profileName-username" target="_blank" rel="noreferrer"
+          <a
+            href="${user?.html_url}"
+            class="card-header-profileName-username"
+            target="_blank"
+            rel="noreferrer"
             >@${user.login}</a
           >
           <p class="card-header-profileName-date">Joined ${createdAt}</p>
         </div>
       </section>
-
       <article class="card-description">
         <p class="card-description-txt">${user.bio}</p>
       </article>
-
       <section class="card-social">
         <div>
           <p>
@@ -46,7 +48,6 @@ export const profileCard = (user) => {
           </p>
         </div>
       </section>
-
       <section class="card-info">
         <div>
           <i class="fas fa-map-marker-alt"></i>
@@ -54,11 +55,21 @@ export const profileCard = (user) => {
         </div>
         <div>
           <i class="fas fa-link"></i>
-          <p>${user.blog}</p>
+          <p>
+            <a href="${user.blog}" target="_blank" rel="noreferrer">
+              ${user.blog}
+            </a>
+          </p>
         </div>
         <div>
           <i class="fab fa-twitter"></i>
-          <p>@${user.twitter_username}</p>
+          <a
+            href="https://twitter.com/${user.twitter_username}"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <p>@${user.twitter_username}</p>
+          </a>
         </div>
         <div>
           <i class="far fa-building"></i>

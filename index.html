@@ -29,7 +29,7 @@
       <header class="header">
         <h1 class="header-title">ghfinder</h1>
       </header>
-      <section class="searcher">
+      <section class="searcher" id="searcher">
         <div class="searcher-form">
           <label for="gh-username" class="searcher-form-icon">
             <i class="fas fa-search"></i>
@@ -40,9 +40,12 @@
             name="gh-username"
             placeholder="Search a github username..."
             type="text"
+            autocomplete="off"
           />
         </div>
-        <button class="searcher-btn">Search</button>
+        <button class="searcher-btn" type="button" id="search-btn">
+          Search
+        </button>
       </section>
       <section id="content" class="card-containter"></section>
     </main>

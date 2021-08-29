@@ -14,8 +14,7 @@
       border-radius: 100%;
       height: 100px;
       width: 100px;
-      transition: transform var(--transition);
-      transition: border-radius var(--transition);
+      transition: var(--transition);
 
       &:hover {
         transform: scale(1.1);
@@ -78,6 +77,11 @@
       font-family: var(--title-font);
       font-size: 1rem;
       font-weight: 700;
+      transition: var(--transition);
+
+      &:hover {
+        color: var(--primary-blue);
+      }
     }
   }
 
@@ -101,6 +105,11 @@
 
       p {
         font-family: var(--title-font);
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
       }
 
       i {

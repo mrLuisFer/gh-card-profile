@@ -1,4 +1,4 @@
-import { profileCard } from './profileCard.js'
+import { profileCard } from './profileCard'
 
 const content = document.querySelector('#content')
 

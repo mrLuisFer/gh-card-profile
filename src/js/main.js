@@ -7,30 +7,35 @@ const octokit = new Octokit({ auth: ghToken })
 let username
 
 const inputUsername = document.querySelector('#gh-username')
-const searcher = document.querySelector('#searcher')
+const searcherSection = document.querySelector('#searcher')
 const logo = document.querySelector('#logo')
+const searchBtn = document.querySelector('#search-btn')
 
 logo.addEventListener('click', () => {
   inputUsername.focus()
 })
 
-const handleSearchUser = (query, event) => {
+inputUsername.addEventListener('change', (event) => {
+  const query = event.target.value
+  if (query === username) return
+
   if (query.length > 0) {
     username = query.replace(/\s/g, '-')
-    console.log(username)
     getUserProfile({ event, octokit, username })
   }
-}
-
-inputUsername.addEventListener('change', (event) => {
-  const inputValue = event.target.value
-  handleSearchUser(inputValue, event)
 })
 
 inputUsername.addEventListener('focus', () => {
-  searcher.classList.add('borderColor')
+  searcherSection.classList.add('borderColor')
 })
 
 inputUsername.addEventListener('blur', () => {
-  searcher.classList.remove('borderColor')
+  searcherSection.classList.remove('borderColor')
+})
+
+searchBtn.addEventListener('click', (event) => {
+  console.log(username)
+  if (username === undefined || username.length < 1) {
+    inputUsername.focus()
+  }
 })

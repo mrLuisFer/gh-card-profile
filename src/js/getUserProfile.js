@@ -13,6 +13,5 @@ export const getUserProfile = async ({ event, octokit, username }) => {
   } else {
     console.info('En error')
   }
-
   event.target.value = ''
 }

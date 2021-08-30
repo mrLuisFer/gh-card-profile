@@ -1,0 +1,44 @@
+.nosearch {
+  &-title {
+    color: var(--primary-text-color);
+    text-align: center;
+    padding-top: 1rem;
+    border-bottom: 2px solid transparent;
+    transition: var(--transition);
+    width: fit-content;
+    margin: 0 auto;
+    opacity: 0.9;
+    font-family: var(--title-font);
+
+    &:hover {
+      border-bottom: 2px solid var(--primary-blue);
+    }
+  }
+
+  &-img {
+    animation: levitate 6s ease-in-out infinite;
+    display: block;
+    margin-top: -3rem;
+    margin: 0 auto;
+    transition: var(--transition);
+    user-select: none;
+    width: 100%;
+
+    @media (min-width: 700px) {
+      margin-top: -5rem;
+      width: 500px;
+    }
+  }
+}
+
+@keyframes levitate {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

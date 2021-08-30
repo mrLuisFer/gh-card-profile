@@ -8,6 +8,11 @@ let username
 
 const inputUsername = document.querySelector('#gh-username')
 const searcher = document.querySelector('#searcher')
+const logo = document.querySelector('#logo')
+
+logo.addEventListener('click', () => {
+  inputUsername.focus()
+})
 
 const handleSearchUser = (query, event) => {
   if (query.length > 0) {

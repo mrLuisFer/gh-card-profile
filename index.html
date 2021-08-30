@@ -27,7 +27,11 @@
   <body>
     <main id="app">
       <header class="header">
-        <h1 class="header-title" title="Built with HTML/CSS/JS by mrLuisFer">
+        <h1
+          class="header-title"
+          title="Built with HTML/CSS/JS by mrLuisFer"
+          id="logo"
+        >
           ghfinder
         </h1>
       </header>
@@ -49,7 +53,16 @@
           Search
         </button>
       </section>
-      <section id="content" class="card-containter"></section>
+      <section id="content" class="card-containter">
+        <h1 class="nosearch-title">No user searched</h1>
+        <img
+          src="search-astronaut.svg"
+          alt="Search a github user"
+          class="nosearch-img"
+          loading="lazy"
+          draggable="false"
+        />
+      </section>
     </main>
     <script type="module" src="/src/js/main.js"></script>
   </body>

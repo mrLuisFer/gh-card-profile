@@ -50,8 +50,9 @@ body {
   font-family: var(--text-font);
   scroll-behavior: smooth;
   transition: var(--transition);
+  padding: 2rem 0;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1000px) {
     display: flex;
     justify-content: center;
     align-items: center;

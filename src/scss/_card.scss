@@ -21,20 +21,29 @@
       justify-content: center;
     }
 
+    @media (min-width: 1000px) {
+      column-gap: 2.5rem;
+    }
+
     &-avatar {
       border-radius: 100%;
       height: 100px;
       width: 100px;
       transition: var(--transition);
 
+      &:hover {
+        border-radius: 40%;
+        transform: scale(1.1);
+      }
+
       @media (min-width: 700px) {
         height: 150px;
         width: 150px;
-      }
 
-      &:hover {
-        transform: scale(1.1);
-        border-radius: 40%;
+        &:hover {
+          border-radius: 40%;
+          transform: scale(1.05);
+        }
       }
     }
 
@@ -52,14 +61,26 @@
       }
 
       &-username {
+        border-bottom: 1px solid transparent;
         color: var(--primary-blue);
         font-size: 0.8rem;
         letter-spacing: 0.2px;
         line-height: 1.5;
         text-decoration: none;
+        transition: var(--transition);
 
         @media (min-width: 700px) {
           font-size: 1rem;
+        }
+
+        @media (min-width: 1000px) {
+          display: inline-block;
+          font-size: 1.05rem;
+          margin: 0.5rem 0;
+        }
+
+        &:hover {
+          border-bottom: 1px solid var(--primary-blue);
         }
       }
 
@@ -110,6 +131,7 @@
       letter-spacing: 0.3px;
       line-height: 2.5;
       text-align: center;
+      user-select: none;
     }
 
     span {

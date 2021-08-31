@@ -12,6 +12,10 @@ inputUsername.addEventListener('blur', () => {
   searcherSection.classList.remove('borderColor')
 })
 
+searcherSection.addEventListener('click', () => {
+  inputUsername.focus()
+})
+
 searchBtn.addEventListener('click', (event) => {
   console.log(username)
   if (username === undefined || username.length < 1) {

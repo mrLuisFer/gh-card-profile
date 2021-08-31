@@ -25,6 +25,7 @@
   &-form {
     align-items: center;
     column-gap: 0.45rem;
+    cursor: pointer;
     display: flex;
 
     &-icon {
@@ -42,6 +43,10 @@
       color: var(--primary-text-color);
       outline: none;
       width: 100%;
+
+      @media (min-width: 700px) {
+        font-size: 1rem;
+      }
 
       &::placeholder {
         color: var(--primary-text-color);
@@ -63,12 +68,16 @@
     text-align: center;
     transition: box-shadow var(--transition);
 
+    @media (min-width: 375px) {
+      padding: 0.7rem;
+    }
+
     &:hover {
       box-shadow: 0 0 4px 1px var(--primary-blue);
     }
 
-    @media (min-width: 375px) {
-      padding: 0.7rem;
+    &:active {
+      transform: scale(0.96);
     }
   }
 }

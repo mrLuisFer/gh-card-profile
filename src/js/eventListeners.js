@@ -25,4 +25,16 @@ searchBtn.addEventListener('click', (event) => {
 
 themeToggle.addEventListener('click', (event) => {
   document.body.classList.toggle('dark')
+  const darkHtmlTemplate = /* html */ `
+    <i class="fas fa-moon themeToggle-icon"></i>
+    Dark
+  `
+  const lightHtmlTemplate = /* html */ `
+    <i class="fas fa-sun themeToggle-icon"></i>
+    Light
+  `
+
+  themeToggle.innerHTML = document.body.classList.contains('dark')
+    ? darkHtmlTemplate
+    : lightHtmlTemplate
 })

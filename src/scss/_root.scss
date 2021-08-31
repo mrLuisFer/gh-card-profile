@@ -6,7 +6,7 @@
   --title-font: 'Comfortaa', cursive, Arial, sans-serif;
   --text-font: 'Poppins', Arial, sans-serif;
   --radius: 12px;
-  --transition: 0.15s ease-in;
+  --transition: 0.1s ease-in;
   --shadow: rgba(0, 0, 0, 0.3);
   font-size: 16px;
 
@@ -28,6 +28,7 @@ body.dark {
 * {
   box-sizing: border-box;
   margin: 0;
+  transition: var(--transition);
   padding: 0;
 }
 
@@ -42,6 +43,7 @@ body {
   background: var(--primary-bg);
   font-family: var(--text-font);
   scroll-behavior: smooth;
+  transition: var(--transition);
 
   @media (min-width: 1024px) {
     display: flex;

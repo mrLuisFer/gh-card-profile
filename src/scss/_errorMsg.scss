@@ -1,0 +1,45 @@
+.errorMsg {
+  align-items: center;
+  background: var(--shadow);
+  cursor: no-drop;
+  display: none;
+  min-height: 100vh;
+  inset: 0;
+  justify-content: center;
+  position: fixed;
+  text-align: center;
+  min-width: 100vw;
+
+  &-content {
+    background: var(--secondary-bg);
+    border-radius: var(--radius);
+    cursor: default;
+    padding: 2rem 1rem;
+    width: 300px;
+  }
+
+  &-title {
+    color: rgb(255, 37, 37);
+    font-family: var(--title-font);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  & p {
+    color: var(--primary-text-color);
+    font-size: 1rem;
+    line-height: 1.8;
+
+    span {
+      display: block;
+      font-size: 0.85rem;
+      opacity: 0.8;
+      transition: var(--transition);
+      margin-top: 0.5rem;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

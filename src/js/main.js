@@ -9,11 +9,6 @@ const octokit = new Octokit({ auth: ghToken })
 export let username
 
 const inputUsername = document.querySelector('#gh-username')
-const logo = document.querySelector('#logo')
-
-logo.addEventListener('click', () => {
-  inputUsername.focus()
-})
 
 inputUsername.addEventListener('change', (event) => {
   const query = event.target.value

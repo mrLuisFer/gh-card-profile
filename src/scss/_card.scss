@@ -111,7 +111,7 @@
       font-size: 1rem;
       text-align: center;
       max-width: 500px;
-      margin: 0 auto;
+      margin: 1rem auto;
     }
   }
 
@@ -145,6 +145,7 @@
       font-size: 1rem;
       font-weight: 700;
       transition: var(--transition);
+      color: var(--primary-text-color);
 
       &:hover {
         color: var(--primary-blue);

@@ -2,14 +2,15 @@
   align-items: center;
   background: var(--secondary-bg);
   border-radius: var(--radius);
+  border: 2px solid transparent;
+  box-shadow: 0.1px 1px 5px 0px rgba(0, 0, 0, 0.2);
   color: var(--primary-blue);
   display: flex;
   font-size: 1.2rem;
   justify-content: space-between;
   margin: 2rem 1rem 1rem;
   padding: 0.5rem;
-  border: 2px solid transparent;
-  transition: border var(--transition);
+  transition: var(--transition);
 
   @media (min-width: 375px) {
     display: grid;
@@ -20,6 +21,10 @@
     max-width: 640px;
     margin: 2rem auto 1rem;
     min-width: 560px;
+  }
+
+  &:hover {
+    box-shadow: 0.1px 1px 5px 0px rgba(0, 0, 0, 0.4);
   }
 
   &-form {

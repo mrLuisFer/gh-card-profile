@@ -1,4 +1,6 @@
 import '../scss/style.scss'
+import './themeToggle'
+import './eventListeners'
 import { Octokit } from 'https://cdn.skypack.dev/@octokit/core'
 import { getUserProfile } from './getUserProfile'
 

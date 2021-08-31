@@ -29,7 +29,12 @@ themeToggle.addEventListener('click', () => {
 
 function checkTheme() {
   const localStorageTheme = localStorage.getItem('theme')
-  console.log(localStorageTheme)
+
+  if (localStorageTheme === light) {
+    document.body.classList.add(light)
+  } else {
+    document.body.classList.replace(light, dark)
+  }
 }
 
 window.onload = checkTheme()

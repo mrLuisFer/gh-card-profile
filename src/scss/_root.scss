@@ -31,6 +31,23 @@ body.light {
   --secondary-light: #ffffff;
 }
 
+@media (prefers-color-scheme: dark) {
+  body.dark {
+    --primary-bg: #141c2f;
+    --primary-text-color: #f5f8ff;
+    --secondary-bg: #1f2a48;
+    --secondary-light: #ffffff;
+  }
+}
+@media (prefers-color-scheme: light) {
+  body.light {
+    --primary-bg: #ebf1ff;
+    --primary-text-color: #33373a;
+    --secondary-bg: #fffdfd;
+    --secondary-light: #ffffff;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -50,7 +67,11 @@ body {
   font-family: var(--text-font);
   scroll-behavior: smooth;
   transition: var(--transition);
-  padding: 2rem 0;
+  padding-bottom: 1rem;
+
+  @media (min-width: 700px) {
+    padding: 2rem 0;
+  }
 
   @media (min-width: 1000px) {
     display: flex;

@@ -40,9 +40,16 @@ export const profileCard = (user) => {
           <p class="card-header-profileName-date">Joined ${createdAt}</p>
         </div>
       </section>
-      <article class="card-description">
-        <p class="card-description-txt">${bio}</p>
-      </article>
+      ${
+        bio === null
+          ? ``
+          : `
+            <article class="card-description">
+              <p class="card-description-txt">${bio}</p>
+            </article>
+          `
+      }
+      
       <section class="card-social">
         <div>
           <p>

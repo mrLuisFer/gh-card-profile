@@ -1,4 +1,5 @@
 # ⚡ Github Profile Searcher
+![ghfinder preview](./preview.png)
 
 ## 📘 About
 This is a simple project, based on a Frontend Mentor challenge

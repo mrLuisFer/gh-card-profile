@@ -1,6 +1,6 @@
 {
   "name": "gh-card-profile",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -17,5 +17,14 @@
     "prettier": "2.3.2",
     "sass": "^1.38.2",
     "vite": "^2.4.4"
+  },
+  "author": {
+    "name": "mrLuisFer",
+    "url": "https://mrluisfer-linktry.netlify.app/",
+    "email": "mrluisfeer@gmail.com"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "16.6.1"
   }
 }

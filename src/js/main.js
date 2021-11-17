@@ -19,3 +19,13 @@ inputUsername.addEventListener('change', (event) => {
     getUserProfile({ event, octokit, username })
   }
 })
+
+window.addEventListener('load', () => {
+  const location = window.location
+  const pathUrl = location.pathname.toString()
+
+  // This should be redirect to the profile page
+  if (pathUrl !== '/') {
+    location.href = '/'
+  }
+})

@@ -48,7 +48,7 @@ export const profileCard = (user) => {
             </article>
           `
       }
-      
+
       <section class="card-social">
         <div>
           <p>
@@ -77,9 +77,7 @@ export const profileCard = (user) => {
         <div>
           <i class="fas fa-link"></i>
           <p>
-            <a href="${blog}" target="_blank" rel="noreferrer">
-              ${blog}
-            </a>
+            <a href="${blog}" target="_blank" rel="noreferrer"> ${blog} </a>
           </p>
         </div>
         <div>
@@ -94,7 +92,15 @@ export const profileCard = (user) => {
         </div>
         <div>
           <i class="far fa-building"></i>
-          <p>@${company}</p>
+          <p>
+            <a
+              href="https://www.google.com/search?q=${company}"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ${company}
+            </a>
+          </p>
         </div>
       </section>
     </div>

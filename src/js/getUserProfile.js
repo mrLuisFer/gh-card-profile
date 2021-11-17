@@ -1,4 +1,4 @@
-import { profileCard } from './profileCard'
+import { profileCard } from './profileCardTemplate'
 
 const content = document.querySelector('#content')
 const errorMsgSection = document.querySelector('#errorMsg')

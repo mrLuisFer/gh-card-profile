@@ -144,11 +144,15 @@
       font-family: var(--title-font);
       font-size: 1rem;
       font-weight: 700;
-      transition: var(--transition);
+      transition: color var(--transition);
       color: var(--primary-text-color);
 
       &:hover {
         color: var(--primary-blue);
+      }
+
+      @media (min-width: 425px) {
+        font-size: 1.1rem;
       }
     }
   }

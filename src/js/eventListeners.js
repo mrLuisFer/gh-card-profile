@@ -17,7 +17,6 @@ searcherSection.addEventListener('click', () => {
 })
 
 searchBtn.addEventListener('click', () => {
-  console.log(username)
   if (username === undefined || username.length < 1) {
     inputUsername.focus()
   }

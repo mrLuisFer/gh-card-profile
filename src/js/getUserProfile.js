@@ -1,7 +1,7 @@
 import { profileCard } from './profileCardTemplate'
+import { showErrorMsg } from './showErrorMsg'
 
 const content = document.querySelector('#content')
-const errorMsgSection = document.querySelector('#errorMsg')
 
 export const getUserProfile = async ({ event, octokit, username }) => {
   try {
@@ -13,17 +13,10 @@ export const getUserProfile = async ({ event, octokit, username }) => {
 
       content.innerHTML = profileCard(user)
     } else {
-      console.log('En error')
+      showErrorMsg()
     }
     event.target.value = ''
   } catch (error) {
-    console.log(error)
-    errorMsgSection.style.display = 'flex'
-    document.body.style.overflow = 'hidden'
-
-    setTimeout(() => {
-      document.body.style.overflow = 'auto'
-      errorMsgSection.style.display = 'none'
-    }, 2000)
+    showErrorMsg()
   }
 }
